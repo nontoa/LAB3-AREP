@@ -81,17 +81,17 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class LectorURL {
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		String urluser = in.readLine();
-		String data="";
-	
-	    	URL pagina = new URL("http://www."+urluser);
+                String datos="";
+		String userURL= in.readLine();
+		
+	    	URL page = new URL("https://www."+userURL);
 	    
-	    	try (BufferedReader reader = new BufferedReader(new InputStreamReader(pagina.openStream()))) {
+	    	try (BufferedReader reader = new BufferedReader(new InputStreamReader(page.openStream()))) {
 			String inputLine = null;
 			while ((inputLine = reader.readLine()) != null) {
-				data+=inputLine;
+				datos+=inputLine;
 			}
 		} catch (IOException x) {
 			System.err.println(x);
@@ -109,7 +109,7 @@ public class LectorURL {
 		// flag true, indica adjuntar informacion al archivo.
 		fw = new FileWriter(file.getAbsoluteFile(), true);
 		bw = new BufferedWriter(fw);
-		bw.write(data);
+		bw.write(datos);
 	    } catch (IOException e) {
 		e.printStackTrace();
 	    } finally {
