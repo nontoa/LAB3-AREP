@@ -3,6 +3,10 @@ package edu.escuelaing.arem.ASE.app;
 import java.io.*;
 import java.net.*;
 
+/**
+ *
+ * @author Nicolas Nontoa.
+ */
 public class URLReader {
 
 	public static void main(String[] args) throws Exception {
