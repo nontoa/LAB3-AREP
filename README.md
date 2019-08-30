@@ -804,7 +804,7 @@ public class DatagramTimeServer implements Runnable {
 
 * En la siguiente imagen vemos como cada 5 segundo se actualiza la hora en la consola:
 
-![Screenshot](images/datagrama.jpg)
+![Screenshot](images/datagrama.png)
 
 
 ## Autores
